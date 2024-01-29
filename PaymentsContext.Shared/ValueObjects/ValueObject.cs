@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace PaymentsContext.Shared.ValueObjects
 {
-    public abstract class ValueObject : Notification
+    public abstract class ValueObject : Notifiable
     {
     }
 }

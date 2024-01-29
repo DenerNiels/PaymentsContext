@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace PaymentsContext.Shared.Entities
 {
-    public abstract class Entity : Notification
+    public abstract class Entity : Notifiable
     {
         //protected Entity(Guid id)
         //{
