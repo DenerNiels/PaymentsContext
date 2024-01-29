@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Flunt.Validations;
+using PaymentsContext.Shared.ValueObjects;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace PaymentsContext.Domain.ValueObjects
 {
-    public class Adress
+    public class Adress : ValueObject
     {
         public Adress(string street, string number, string neighborhood, string city, string state, string country, string zipCode)
         {
@@ -17,6 +19,11 @@ namespace PaymentsContext.Domain.ValueObjects
             State = state;
             Country = country;
             ZipCode = zipCode;
+
+            AddNotifications(new Contract()
+                .Requires()
+                .HasMinLen(Street, 3, "Adress.Street", "O nome da rua deve conter pelo menos 3 caracteres")
+                );
         }
 
         public string Street { get; private set; }
