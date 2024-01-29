@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PaymentsContext.Domain.ValueObjects;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,14 +10,17 @@ namespace PaymentsContext.Domain.Entities
 
     public class BoletoPayment : Payment
     {
-        public BoletoPayment(string barCode, string boletoNumber, DateTime paidDate,
+        public BoletoPayment(
+            string barCode, 
+            string boletoNumber, 
+            DateTime paidDate,
             DateTime expireDate,
             decimal total,
             decimal totalPaid,
             string payer,
-            string document,
-            string adress,
-            string email) : base(
+            Document document,
+            Adress adress,
+            Email email) : base(
                 paidDate,
                 expireDate,
                 total, 

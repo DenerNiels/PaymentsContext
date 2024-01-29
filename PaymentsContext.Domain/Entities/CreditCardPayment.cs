@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PaymentsContext.Domain.ValueObjects;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,14 +9,18 @@ namespace PaymentsContext.Domain.Entities
 {
     public class CreditCardPayment : Payment
     {
-        public CreditCardPayment(string cardHolderName, string cardNumber, string lastTransactionNumber, DateTime paidDate,
+        public CreditCardPayment(
+            string cardHolderName, 
+            string cardNumber, 
+            string lastTransactionNumber, 
+            DateTime paidDate,
             DateTime expireDate,
             decimal total,
             decimal totalPaid,
             string payer,
-            string document,
-            string adress,
-            string email) : base(
+            Document document,
+            Adress adress,
+            Email email) : base(
                 paidDate,
                 expireDate,
                 total,

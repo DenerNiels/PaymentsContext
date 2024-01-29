@@ -1,4 +1,6 @@
-﻿using System;
+﻿using PaymentsContext.Domain.ValueObjects;
+using PaymentsContext.Shared.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,24 +8,24 @@ using System.Threading.Tasks;
 
 namespace PaymentsContext.Domain.Entities
 {
-    public class Student
+    public class Student : Entity
     {
         private IList<Subscription> _subscriptions;
-        public Student(string firstName, string lastName, string document, string email)
+        public Student(Name name, Document document, Email email)
         {
-            FirstName = firstName;
-            LastName = lastName;
+            Name= name;
             Document = document;
             Email = email;
             _subscriptions = new List<Subscription>();
+
+            AddNotifications(name, document, email);
             
         }
 
-        public string FirstName { get; private set; }
-        public string LastName { get; private set; }
-        public string Document { get; private set; }
-        public string Email { get; private set; }
-        public string Adress { get; private set; }
+        public Name Name { get; private set; }
+        public Document Document { get; private set; }
+        public Email Email { get; private set; }
+        public Adress Adress { get; private set; }
         public IReadOnlyCollection<Subscription> Subscriptions => _subscriptions.ToArray(); 
         public void AddSubscription (Subscription subscription)
         {

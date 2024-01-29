@@ -1,4 +1,6 @@
-﻿using PaymentsContext.Domain.Entities;
+﻿using Flunt.Notifications;
+using PaymentsContext.Domain.Entities;
+using PaymentsContext.Domain.ValueObjects;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,14 +10,14 @@ using System.Threading.Tasks;
 namespace PaymentsContext.Tests.Entities
 {
     [TestClass]
-    public class StudentTest
+    public class StudentTest : Notification
     {
         [TestMethod]
         public void AdicionarAssinatura()
         {
-            var subscription = new Subscription(null);
-            var student = new Student("Rovinha", "Super", "777777777", "rovinha@test.com");
-            student.AddSubscription(subscription);
-        }
+            
+            
+        }   
     }
 }
+
