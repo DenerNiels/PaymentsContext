@@ -11,12 +11,13 @@ namespace PaymentsContext.Domain.ValueObjects
 {
     public class Name : ValueObject
     {
-        public Name(string firstName, string lastName, Contract contract)
+        public Name(string firstName, string lastName)
         {
             FirstName = firstName;
             LastName = lastName;
 
-            AddNotifications(contract.Requires()
+            AddNotifications(new Contract()
+                .Requires()
                 .HasMinLen(FirstName, 3, "Name.FirstName", "O nome deve conter pelo menos 3 caracteres")
                 .HasMinLen(LastName, 3, "Name.LastName", "O sobrenome deve conter pelo menos 3 caracteres")
                 .HasMaxLen(FirstName, 40, "Name.FirstName", "O nome deve conter até 40 caracteres")
