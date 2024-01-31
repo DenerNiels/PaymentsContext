@@ -27,7 +27,7 @@ namespace PaymentsContext.Domain.Entities
         public Name Name { get; private set; }
         public Document Document { get; private set; }
         public Email Email { get; private set; }
-        public Adress Adress { get; private set; }
+        public Address Adress { get; private set; }
         public IReadOnlyCollection<Subscription> Subscriptions => _subscriptions.ToArray(); 
         public void AddSubscription (Subscription subscription)
         {

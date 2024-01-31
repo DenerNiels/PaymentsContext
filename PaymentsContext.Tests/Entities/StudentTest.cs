@@ -16,7 +16,7 @@ namespace PaymentsContext.Tests.Entities
     {
         private readonly Name _name;
         private readonly Document _document;
-        private readonly Adress _adress;
+        private readonly Address _adress;
         private readonly Email _email;
         private readonly Student _student;
         private readonly Subscription _subscription;
@@ -27,7 +27,7 @@ namespace PaymentsContext.Tests.Entities
             _name = new Name("Vito", "Rovaris");
             _document = new Document("475.880.170-31", Domain.Enums.EDocumentType.CPF);
             _email = new Email("gorinho@senai.com");
-            _adress = new Adress("Morro do senai", "42", "1 de maio", "BQ", "SC", "BR", "Rovalandia");
+            _adress = new Address("Morro do senai", "42", "1 de maio", "BQ", "SC", "BR", "Rovalandia");
             _student = new Student(_name, _document, _email);
             _subscription = new Subscription(null);
             
