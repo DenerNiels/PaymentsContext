@@ -1,12 +1,5 @@
-﻿using Flunt.Notifications;
-using PaymentsContext.Domain.Entities;
+﻿using PaymentsContext.Domain.Entities;
 using PaymentsContext.Domain.ValueObjects;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection.Metadata;
-using System.Text;
-using System.Threading.Tasks;
 using Document = PaymentsContext.Domain.ValueObjects.Document;
 
 namespace PaymentsContext.Tests.Entities

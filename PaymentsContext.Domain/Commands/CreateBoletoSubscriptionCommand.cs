@@ -2,11 +2,6 @@
 using Flunt.Validations;
 using PaymentsContext.Domain.Enums;
 using PaymentsContext.Shared.Commands;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PaymentsContext.Domain.Commands
 {
